@@ -3,14 +3,15 @@ const API_KEY = 'f43d4fd09d0fd18a82379b51692a7765';
 const API_BASE = 'https://api.themoviedb.org/3';
 
 
-
+// Função que irá 
 const basicFetch = async (endpoint) => {
     const req = await fetch(`${API_BASE}${endpoint}`);
     const json = await req.json();
-    return json
+    return json;
 }
 
 
+// Pegando e retornando os filmes da Netflix de acordo com gênero 
 export default {
     getHomeList: async () => {
         return [
@@ -22,7 +23,7 @@ export default {
             {
                 slug: 'trending',
                 title: 'Recomendados para Você',
-                items: await basicFetch(`trending/all/week?language=pt-BR&api_key=${API_KEY}`)
+                items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'toprated',
