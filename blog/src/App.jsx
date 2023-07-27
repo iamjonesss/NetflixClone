@@ -3,6 +3,8 @@ import './App.css'
 import TMDB from './TMDB'
 import MovieRow from './components/MovieRow';
 
+
+
 function App() {
   
   const [movieList, setMovieList] = useState([]);
